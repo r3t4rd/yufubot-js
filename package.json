@@ -1,0 +1,39 @@
+{
+  "name": "wisp-js",
+  "version": "2.0.0",
+  "description": "A discord bot used to interact with the pnl.yufu.us",
+  "main": "index.js",
+  "bin": {
+    "wisp-js": "bot.js"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "discord.js": "^12.0.2",
+    "node-cache": "^5.1.0",
+    "text-table": "^0.2.0",
+    "underscore": "^1.10.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maineiac/wisp-js.git"
+  },
+  "keywords": [
+    "wisp",
+    "bot",
+    "discord",
+    "nodejs"
+  ],
+  "author": "Maineiac#0001",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maineiac/wisp-js/issues"
+  },
+  "homepage": "https://github.com/Maineiac/wisp-js#readme",
+  "nodemonConfig": {
+    "ignore": ["data/*"]
+  }
+}
