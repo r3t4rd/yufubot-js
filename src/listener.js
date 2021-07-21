@@ -27,7 +27,7 @@ module.exports = async function(msg) {
 
         }
 
-        msg.channel.send((result) ? (_.isObject(result)) ? await embed(result) : result : `Invalid command ${args[0]}`);
+        msg.channel.send((result) ? (_.isObject(result)) ? await embed(result) : result : `Чего? Но ведь команды ${args[0]} не существует!`);
 
 
     }

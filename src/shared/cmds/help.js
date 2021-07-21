@@ -3,42 +3,42 @@ const settings = require(`${process.env.root}/config/settings`);
 
 function clientHelp() {
     let obj = util.baseEmbedObj(["shared", "help"]);
-    obj.desc = `**Base commands**\n\`\`\`${settings.prefix}help | You're looking at it.\n${settings.prefix}servers | Get a list of the available servers.\`\`\`\n**Server commands**\nThese are performed with the command being the alias for the server it's being addressed to. Here is the format for server commands : \n\`${settings.prefix}alias [command] <arguments>\`\n\`\`\`${settings.prefix}alias [status] | Get the state and usage.\n${settings.prefix}alias [players] | Get a list of current players.\n${settings.prefix}alias [power] <signal> | Send power signal.\n${settings.prefix}alias [cmd] <command> | Send command to console.\`\`\``;
+    obj.desc = `**Основные команды**\n\`\`\`${settings.prefix}help | Вы находитесь здесь. Поздравляем!\n${settings.prefix}servers | Выдаст полный список игровых серверов к которым у тебя есть доступ.\`\`\`\n**Серверные команды**\nТак, здесь будь несколько аккуратнее. Эти команды используются для взаимодействия с сервером. Включить, выключить и всё такое. Выглядит, собственно, следующим образом: \n\n\`${settings.prefix}alias [cmd] <args>\`\n\`\`\`${settings.prefix}alias [status] | Выдаст детальную инфу о сервере.\n${settings.prefix}alias [players] | Список игроков.\n${settings.prefix}alias [power] <signal> | Выключить-включить .\n${settings.prefix}alias [cmd] <command> | Отправить команду в консоль.\n${settings.prefix}alias [lua] <command> | Если сервер - GarrysMod, то отправит код на сервер.\`\`\``;
 
     return obj;
 }
 
 function adminHelp() {
     let obj = util.baseEmbedObj(["shared", "help"]);
-    obj.desc = `This bot is very powerful, please take caution when running admin (application) api commands.\n\n**Admin Commands**\nThere are too many subcommands to list everything here, please check the help menus for each base comand.\n\`\`\`${settings.prefix}location help\n${settings.prefix}nest help\n${settings.prefix}node help\n${settings.prefix}server help\n${settings.prefix}user help\`\`\``;
+    obj.desc = `Так, друг, я тебя поздравляю с получением прав технического админстратора сервера, а то и выше. Бот крайне крутой и может ну очень много, так что, **пожалуйста, будь аккуратен при использовании команд**. \n\n**Команды не для всех..**\nТак, здесь очень много подкоманд, так что проверяй help меню для каждой команды перед использованием.\n\`\`\`${settings.prefix}location help\n${settings.prefix}nest help\n${settings.prefix}node help\n${settings.prefix}server help\n${settings.prefix}user help\`\`\``;
     return obj;
 }
 
 function sharedHelp() {
     obj = util.baseEmbedObj(["shared", "help"])
-    obj.desc = `Both the admin and client module are loaded.\n
-    You can get the root help embed with one of the following commands :\n
+    obj.desc = `Так. Этот одновременно находится и в режиме клиента и технического администратора.\n
+    Собственно, какие именно команды тебя интересуют?\n
     \`\`\`!help client\n!help admin\`\`\``;
     return obj;
 }
 
 function noModule() {
     obj = util.baseEmbedObj(["shared", "error"])
-    obj.title.text = `No modules loaded`;
-    obj.desc = `Neither the admin or client modules are enabled. The bot has no functionality besides this embed.`;
+    obj.title.text = `НЕТ МОДУЛЕЙ!1!11!`;
+    obj.desc = `Ни один из режимов не был включен. Бот чисто поржать здесь сидит.`;
     return obj;
 }
 function missingModule(module) {
     obj = util.baseEmbedObj(["shared", "error"])
-    obj.title.text = `Module not loaded!`
-    obj.desc = `The \`${module}\` module seems to be disabled. Sorry.`;
+    obj.title.text = `МОДУЛЬ НЕ ЗАГРУЖЕН11!11!`
+    obj.desc = `Это самое, \`${module}\` оказался выключен. Уж извини.`;
     return obj;
 }
 
 function unknownMenu(module) {
     obj = util.baseEmbedObj(["shared", "error"])
-    obj.title = `Unknown...`
-    obj.desc = `I realize you're looking for help, but that's not how you do it.\n\nTry starting at \`!help\``;
+    obj.title = `чево...`
+    obj.desc = `Друг... \n\nДавай ты начнёшь с \`!help\`, ладно?`;
     return obj;
 }
 

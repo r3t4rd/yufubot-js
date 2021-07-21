@@ -38,7 +38,7 @@ module.exports = async function (prop) {
         embed.setColor((prop.color) ? prop.color : "");
 
         embed.setDescription(
-            (prop.desc) ? prop.desc : "It seems odd there is nothing here..."
+            (prop.desc) ? prop.desc : "Здесь ничего не было..."
         )
 
         if(prop.fields) {
@@ -54,12 +54,12 @@ module.exports = async function (prop) {
             );
         }
 
-        embed.setTimestamp();
+        // embed.setTimestamp();
 
         return embed;
 
     } else {
-        return "Something really bad happened...";
+        return "Бляя...";
 
     }
 } 

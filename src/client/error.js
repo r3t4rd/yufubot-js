@@ -1,15 +1,15 @@
 const settings = require(`${process.env.root}/config/settings`);
 const shared_embeds = require(`${process.env.root}/config/embeds/shared`);
 const errors = {
-    400: ['**400** | `Bad Request`', 'Probably a bad config.'],
-    401: ['**401** | `Unauthorized`', 'The Dino API key is probably invalid.'],
-    403: ['**403** | `Forbidden`', 'Invalid `WISPAPIKey` in config.js'],
-    404: ['**404** | `Not Found`', 'The url used for the request was invalid.\n\nThis can happen because :\n • The id assigned to an alias is invalid.\n • Someone tampered with request.js\n • Someone tampered with the command calling request.js'],
-    405: ['**405** | `Method Not Allowed`', 'This shouldn\'t happen, contact Maineiac#0001.'],
-    412: ['**412** | `Precondition Failed`', 'The server is probably not running.'],
-    429: ['**429** | `Too Many Requests`', 'Your bot has tried to use the api too many times recently, it has been temporarily rate limited'],
-    500: ['**500** | `Internal Server Error`', 'WISP has had a problem. Contact support.'],
-    503: ['**503** | `Service Unavailable`', 'WISP is temporarily offline for maintenance, try again later.'],
+    400: ['**400** | `Bad Request`', 'Э-э-э...'],
+    401: ['**401** | `Unauthorized`', 'Нода отключена от основного сервера.'],
+    403: ['**403** | `Forbidden`', 'Неправильный API ключ был установлен.'],
+    404: ['**404** | `Not Found`', 'Ага, моя любимая ошибка.\n\nПроизошло банально потому что :\n • Айдишник сервера настроен неправильно.\n • Кто-то сломал бота\n • Сам сервер переехал'],
+    405: ['**405** | `Method Not Allowed`', 'Этого не должно было произойти. Отпиши r3t4rd#0157 или на форум - https://yufu.us/forums'],
+    412: ['**412** | `Precondition Failed`', 'Сервер выключен. По крайней мере похоже на это.'],
+    429: ['**429** | `Too Many Requests`', 'Притормози, друг.'],
+    500: ['**500** | `Internal Server Error`', 'Ебать, основной сервер отвалился. Отпиши r3t4rd#0157 или на форум - https://yufu.us/forums'],
+    503: ['**503** | `Service Unavailable`', 'Ебать, основной сервер отвалился. Отпиши r3t4rd#0157 или на форум - https://yufu.us/forums'],
     504: ['**504** | `DaemonConnectionException`', 'The daemon isn\'t responding. '],
     'ENOTFOUND': ['**ENOTFOUND**', 'Invalid PanelURL in config.js, no instance to make requests from.'],
     'ECONNABORTED': ['**ECONNABORTED**', 'Axios timed out (took more than 5 seconds) while sending/waiting for a response.']

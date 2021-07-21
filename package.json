@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Maineiac/wisp-js.git"
+    "url": "git+https://github.com/r3t4rd/yufubot-js.git"
   },
   "keywords": [
     "wisp",
@@ -30,9 +30,9 @@
   "author": "Maineiac#0001",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Maineiac/wisp-js/issues"
+    "url": "https://github.com/r3t4rd/yufubot-js/issues"
   },
-  "homepage": "https://github.com/Maineiac/wisp-js#readme",
+  "homepage": "https://github.com/r3t4rd/yufubot-js#readme",
   "nodemonConfig": {
     "ignore": ["data/*"]
   }

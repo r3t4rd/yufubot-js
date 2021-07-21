@@ -48,21 +48,21 @@ module.exports = async function(args) {
 
     if(data.state == "off") {
         obj.color =  client_embeds.players.color.stopped
-        obj.name = "Server offline";
+        obj.name = "Выключен";
 
     } else if(data.state == "starting") {
         obj.color = client_embeds.players.color.starting;
-        obj.name = "Server starting";
+        obj.name = "Включается";
 
     } else if(!Object.keys(data.query).length) {
         if(settings.debug) { console.log(data); } // This will help if we want to see the object.
-        obj.name = "Server can't be queried.";
-        obj.desc = "This game/voice server type doesn't support queries.";
+        obj.name = "Извини!";
+        obj.desc = "Сервер не может управляться ботом, просто нет поддержки.";
 
     } else {
         // If the server was up to be queried, and the gameserver supports it, we do this.
         obj.name = data.query.name;
-        var array = [['Name', 'Score', 'Time']];
+        var array = [['Ник', 'Убийства', 'Время']];
         var players = data.query.players.concat(data.query.bots);
         obj.color = client_embeds.players.color.running;
 
@@ -75,7 +75,7 @@ module.exports = async function(args) {
 
         }
         if(!array[1]) { // Playerlist is empty
-            obj.desc = "There are no players currently on the server.";
+            obj.desc = "Никто не играет на сервере.";
 
         } else { // Pass our array to the text-table module, returns a "table"
             obj.desc = '```'+table(array, { align: [ 'l', 'c', 'c' ], hsep: [ '    ' ] })+'```';
